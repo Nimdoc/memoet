@@ -6,7 +6,7 @@ RUN apk add git python3 cargo build-base
 
 # For nodejs
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.16/main/" >> /etc/apk/repositories
-RUN apk add nodejs=16.20.0-r0 npm=9.1.2-r0 --repository="http://dl-cdn.alpinelinux.org/alpine/v3.16/main/"
+RUN apk add nodejs npm
 
 COPY mix.exs mix.lock ./
 COPY config .
